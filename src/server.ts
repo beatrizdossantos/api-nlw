@@ -5,5 +5,6 @@ import { router } from "./routes";
 
 const app = express();
 
+app.use(express.json());
 app.use(router);
-app.listen(1234, () => console.log("O servidor está rodando!"));
+app.listen(4321, () => console.log("O servidor está rodando!"));

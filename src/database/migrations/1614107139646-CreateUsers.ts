@@ -10,28 +10,27 @@ export class CreateUsers1614107139646 implements MigrationInterface {
                     {
                         name: "id",
                         type: "uuid",
-                        isPrimary: true
+                        isPrimary: true,
                     },
                     {
                         name: "name",
-                        type: "varchar"
+                        type: "varchar",
                     },
                     {
                         name: "email",
-                        type: "varchar"
+                        type: "varchar",
                     },
                     {
-                        name: "created-at",
+                        name: "created_at",
                         type: "timestamp",
-                        default: "now()"
-                    }
-                ]
+                        default: "now()",
+                    },
+                ],
             })
-        )
+        );
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("users");
     }
-
 }
